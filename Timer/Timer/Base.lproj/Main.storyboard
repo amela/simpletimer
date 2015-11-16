@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9058" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AY-uz-Vtm">
+                                <rect key="frame" x="264" y="195" width="72.5" height="70.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="59"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wya-aY-XLW">
+                                <rect key="frame" x="335" y="285" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="plus">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="plusTenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJY-p4-At5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSC-3i-EBf">
+                                <rect key="frame" x="235" y="285" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onOffAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BnN-6B-mJJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uSC-3i-EBf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4op-NK-vxZ"/>
+                            <constraint firstItem="uSC-3i-EBf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="61J-Ix-Zai"/>
+                            <constraint firstItem="8AY-uz-Vtm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C6g-fP-v9n"/>
+                            <constraint firstItem="wya-aY-XLW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="Vpf-md-kDJ"/>
+                            <constraint firstItem="wya-aY-XLW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="htU-NX-HRh"/>
+                            <constraint firstItem="8AY-uz-Vtm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-70" id="wCl-gu-foP"/>
+                            <constraint firstItem="8AY-uz-Vtm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yy7-Wn-ciW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="C6g-fP-v9n"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="onOffButton" destination="uSC-3i-EBf" id="XeE-OJ-rG0"/>
+                        <outlet property="timerLabel" destination="8AY-uz-Vtm" id="imG-1Z-rES"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1563" y="59"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play" width="32" height="32"/>
+        <image name="plus" width="32" height="32"/>
+    </resources>
+</document>
