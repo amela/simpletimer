@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var oldState : String? = "stopped"
+    var oldGoing: Bool = false
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let viewControllers = self.window?.rootViewController {
             if let vc = viewControllers as? ViewController {
-                oldState = vc.state
+                oldGoing = vc.going
                 vc.stop()
             }
         }
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         if let viewControllers = self.window?.rootViewController {
             if let vc = viewControllers as? ViewController {
-                if oldState == "going" {
+                if oldGoing == true {
                     vc.start()
                 }
             }

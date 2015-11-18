@@ -1,6 +1,9 @@
 # Simple Timer
 
-Simple Timer counts down time in seconds as long as it is in foreground. When the counter drops below 10 its color changes into red. There is a button for adding 10 more seconds to the counter and another to stop and restore the countdown. It was developed as an exercise of *application lifcycle*.
+Simple Timer counts down time in seconds as long as it is in foreground. When the counter drops below 10 its color changes into red. There is a button for adding 10 more seconds to the counter and another to stop and restore the countdown. It was developed as an exercise of *application lifcycle*. <br />
+<br />
+<br />
+Dependency: ChameleonFramework
 
 <img src="img/1.png" width="300" />
 <img src="img/2.png" width="300" />
